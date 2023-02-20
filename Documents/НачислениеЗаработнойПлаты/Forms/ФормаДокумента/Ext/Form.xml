@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="74">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="72">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="73"/>
+			<ChildItems>
+				<InputField name="Начислено" id="7">
+					<DataPath>Объект.Начислено</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленоКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НачисленоРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">НачисленоПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ГруппаНачисления" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисления</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНачисленияРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<Table name="Начисления" id="17">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Начисления</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НачисленияКонтекстноеМеню" id="18"/>
+							<AutoCommandBar name="НачисленияКоманднаяПанель" id="19"/>
+							<ExtendedTooltip name="НачисленияРасширеннаяПодсказка" id="20"/>
+							<SearchStringAddition name="НачисленияСтрокаПоиска" id="21">
+								<AdditionSource>
+									<Item>Начисления</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияСтрокаПоискаКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="НачисленияСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НачисленияСостояниеПросмотра" id="24">
+								<AdditionSource>
+									<Item>Начисления</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияСостояниеПросмотраКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="НачисленияСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НачисленияУправлениеПоиском" id="27">
+								<AdditionSource>
+									<Item>Начисления</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияУправлениеПоискомКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="НачисленияУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НачисленияНомерСтроки" id="30">
+									<DataPath>Объект.Начисления.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияНомерСтрокиКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="НачисленияНомерСтрокиРасширеннаяПодсказка" id="32"/>
+								</LabelField>
+								<InputField name="НачисленияСотрудник" id="33">
+									<DataPath>Объект.Начисления.Сотрудник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияСотрудникКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="НачисленияСотрудникРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="НачисленияПодразделение" id="36">
+									<DataPath>Объект.Начисления.Подразделение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияПодразделениеКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="НачисленияПодразделениеРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="НачисленияДней" id="39">
+									<DataPath>Объект.Начисления.Дней</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияДнейКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="НачисленияДнейРасширеннаяПодсказка" id="41"/>
+									<Events>
+										<Event name="OnChange">НачисленияДнейПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="НачисленияЧас" id="42">
+									<DataPath>Объект.Начисления.Час</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияЧасКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="НачисленияЧасРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<InputField name="НачисленияРезультат" id="45">
+									<DataPath>Объект.Начисления.Результат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияРезультатКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="НачисленияРезультатРасширеннаяПодсказка" id="47"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаУдержания" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удержания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа удержания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаУдержанияРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="Удержания" id="76">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Удержания</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="УдержанияКонтекстноеМеню" id="77"/>
+							<AutoCommandBar name="УдержанияКоманднаяПанель" id="78"/>
+							<ExtendedTooltip name="УдержанияРасширеннаяПодсказка" id="79"/>
+							<SearchStringAddition name="УдержанияСтрокаПоиска" id="80">
+								<AdditionSource>
+									<Item>Удержания</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УдержанияСтрокаПоискаКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="УдержанияСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УдержанияСостояниеПросмотра" id="83">
+								<AdditionSource>
+									<Item>Удержания</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УдержанияСостояниеПросмотраКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="УдержанияСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УдержанияУправлениеПоиском" id="86">
+								<AdditionSource>
+									<Item>Удержания</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УдержанияУправлениеПоискомКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="УдержанияУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УдержанияНомерСтроки" id="89">
+									<DataPath>Объект.Удержания.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УдержанияНомерСтрокиКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="УдержанияНомерСтрокиРасширеннаяПодсказка" id="91"/>
+								</LabelField>
+								<InputField name="УдержанияСотрудник" id="92">
+									<DataPath>Объект.Удержания.Сотрудник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УдержанияСотрудникКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="УдержанияСотрудникРасширеннаяПодсказка" id="94"/>
+								</InputField>
+								<InputField name="УдержанияУдержание" id="95">
+									<DataPath>Объект.Удержания.Удержание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УдержанияУдержаниеКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="УдержанияУдержаниеРасширеннаяПодсказка" id="97"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.НачислениеЗаработнойПлаты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

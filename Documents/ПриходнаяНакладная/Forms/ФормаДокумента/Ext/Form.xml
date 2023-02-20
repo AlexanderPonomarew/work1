@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Сотрудник" id="7">
+			<DataPath>Объект.Сотрудник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Поставщик" id="10">
+			<DataPath>Объект.Поставщик</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПоставщикКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="СуммаПоДокументу" id="41">
+			<DataPath>Объект.СуммаПоДокументу</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="СуммаПоДокументуКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="СуммаПоДокументуРасширеннаяПодсказка" id="43"/>
+			<Events>
+				<Event name="OnChange">СуммаПоДокументуПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="СписокНоменклатуры" id="44">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СписокНоменклатуры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокНоменклатурыКонтекстноеМеню" id="45"/>
+			<AutoCommandBar name="СписокНоменклатурыКоманднаяПанель" id="46"/>
+			<ExtendedTooltip name="СписокНоменклатурыРасширеннаяПодсказка" id="47"/>
+			<SearchStringAddition name="СписокНоменклатурыСтрокаПоиска" id="48">
+				<AdditionSource>
+					<Item>СписокНоменклатуры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокНоменклатурыСтрокаПоискаКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СписокНоменклатурыСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокНоменклатурыСостояниеПросмотра" id="51">
+				<AdditionSource>
+					<Item>СписокНоменклатуры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокНоменклатурыСостояниеПросмотраКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="СписокНоменклатурыСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокНоменклатурыУправлениеПоиском" id="54">
+				<AdditionSource>
+					<Item>СписокНоменклатуры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокНоменклатурыУправлениеПоискомКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="СписокНоменклатурыУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокНоменклатурыНомерСтроки" id="57">
+					<DataPath>Объект.СписокНоменклатуры.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыНомерСтрокиКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="СписокНоменклатурыНомерСтрокиРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<InputField name="СписокНоменклатурыНаименование" id="60">
+					<DataPath>Объект.СписокНоменклатуры.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыНаименованиеКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="СписокНоменклатурыНаименованиеРасширеннаяПодсказка" id="62"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыНаименованиеПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокНоменклатурыКоличество" id="63">
+					<DataPath>Объект.СписокНоменклатуры.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыКоличествоКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="СписокНоменклатурыКоличествоРасширеннаяПодсказка" id="65"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокНоменклатурыЦена" id="66">
+					<DataPath>Объект.СписокНоменклатуры.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыЦенаКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="СписокНоменклатурыЦенаРасширеннаяПодсказка" id="68"/>
+					<Events>
+						<Event name="OnChange">СписокНоменклатурыЦенаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="СписокНоменклатурыСумма" id="69">
+					<DataPath>Объект.СписокНоменклатуры.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокНоменклатурыСуммаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СписокНоменклатурыСуммаРасширеннаяПодсказка" id="71"/>
+					<Events>
+						<Event name="OnChange">СуммаПоДокументуПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПриходнаяНакладная</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.ОстаткиНоменклатуры.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

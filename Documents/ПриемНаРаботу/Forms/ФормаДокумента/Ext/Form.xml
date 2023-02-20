@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа5" id="51">
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="27">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="Сотрудник" id="7">
+					<DataPath>Объект.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ДатаПриема" id="19">
+					<DataPath>Объект.ДатаПриема</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаПриемаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаПриемаРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ДатаУвольнения" id="22">
+					<DataPath>Объект.ДатаУвольнения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаУвольненияКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДатаУвольненияРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="25">
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalSpacing>Half</HorizontalSpacing>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<InputField name="Телефон" id="37">
+					<DataPath>Объект.Телефон</DataPath>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ИНН" id="16">
+					<DataPath>Объект.ИНН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИННКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="СНИЛС" id="13">
+					<DataPath>Объект.СНИЛС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СНИЛСКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="СНИЛСРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="СерияНомерПаспорта" id="40">
+					<DataPath>Объект.СерияНомерПаспорта</DataPath>
+					<ContextMenu name="СерияНомерПаспортаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СерияНомерПаспортаРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="Адрес" id="46">
+					<DataPath>Объект.Адрес</DataPath>
+					<ContextMenu name="АдресКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="49">
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<InputField name="ОпытРаботы" id="10">
+					<DataPath>Объект.ОпытРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>97</Width>
+					<Height>3</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<ContextMenu name="ОпытРаботыКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ОпытРаботыРасширеннаяПодсказка" id="12"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="35">
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="Подразделение" id="43">
+					<DataPath>Объект.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="Должность" id="32">
+					<DataPath>Объект.Должность</DataPath>
+					<ContextMenu name="ДолжностьКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="Оклад" id="29">
+					<DataPath>Объект.Оклад</DataPath>
+					<ContextMenu name="ОкладКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ОкладРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПриемНаРаботу</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.ПриемНаРаботу.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>
